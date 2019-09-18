@@ -3,21 +3,16 @@ html
 		link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
 		link(rel="stylesheet", href="/styles/custom.css")
 	body
-		div.row
-			div.col-3
-			div.col-6.align-self-center
-				nav.navbar.navbar-expand-lg.navbar-light.bg-light
-					a.navbar-brand(href="/")
-						img(src="/images/logo.png" , witdh="120px", height="50px")
-					div.collapse.navbar-collapse
-						ul.navbar-nav
-							li.nav-item
-								a.nav-link(href="/users") Users
-							li.nav-item
-								a.nav-link(href="/users/search") Search
-							li.nav-item
-								a.nav-link(href="/users/create") Create
-				block content
-				block foot
-					p some footer content
-			div.col-3
+		nav.navbar.navbar-expand-lg.navbar-light.bg-light
+			a.navbar-brand(href="/")
+				img(src="/images/logo.png" , witdh="120px", height="50px")
+			div.collapse.navbar-collapse
+				ul.navbar-nav
+					li.nav-item
+						a.nav-link(href="/users") Users
+					li.nav-item
+						a.nav-link(href="/users/search") Search
+					li.nav-item
+						a.nav-link(href="/users/create") Create
+		.container.pt-5
+			block content
