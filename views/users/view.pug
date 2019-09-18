@@ -1,0 +1,12 @@
+extends ../layout/common.pug
+block content
+	h1 View of #{user.name}
+	p
+		b id:
+		span &nbsp;
+		span= user.id
+
+	p
+		b name:
+		span &nbsp;
+		span= user.name
