@@ -2,21 +2,13 @@
   "users": [
     {
       "name": "Kiet",
-      "id": "AeAseQg"
+      "id": "AeAseQg",
+      "email": "letrananhkiet1010@gmail.com",
+      "password": "1234"
     },
     {
       "name": "Tien",
       "id": "5dXvzri"
-    },
-    {
-      "name": "Lê Trần Anh Kiệt",
-      "phone": "01666299196",
-      "id": "btJ0bR5Q"
-    },
-    {
-      "name": "Hoang Thi Thuy Tiên",
-      "phone": "01666299196",
-      "id": "5ubBOg6C"
     }
   ]
 }
