@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var port = 3000;
 
 var userRoute = require('./routes/user.route');
@@ -12,6 +13,7 @@ app.use(express.static('publics')); // lay file tinh~
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 app.get('/', function(req,res) {
 	res.render('index', {
