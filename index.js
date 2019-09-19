@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
@@ -16,7 +18,7 @@ app.use(express.static('publics')); // lay file tinh~
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser('djhawh2323dwada')); // tao 1 secret string
+app.use(cookieParser(process.env.SESSION_SECRET)); // tao 1 secret string
 
 app.get('/', function(req,res) {
 	res.render('index', {
