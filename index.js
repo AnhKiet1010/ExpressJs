@@ -16,7 +16,7 @@ app.use(express.static('publics')); // lay file tinh~
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser());
+app.use(cookieParser('djhawh2323dwada')); // tao 1 secret string
 
 app.get('/', function(req,res) {
 	res.render('index', {
