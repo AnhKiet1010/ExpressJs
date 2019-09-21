@@ -625,5 +625,36 @@
       "image": "https://loremflickr.com/g/320/240/paris",
       "description": "aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis"
     }
+  ],
+  "session": [
+    {
+      "id": "6iU-aNI0",
+      "cart": {
+        "c2b30e4f-72f7-4169-b04c-1897b438e9dd": 1
+      }
+    },
+    {
+      "id": "k3hQILbX"
+    },
+    {
+      "id": "AzGABwmj",
+      "cart": {
+        "d990b12c-5e47-4062-84ef-99f57d4dc52d": 1
+      }
+    },
+    {
+      "id": "SQFIHRD3",
+      "cart": {
+        "d990b12c-5e47-4062-84ef-99f57d4dc52d": 19,
+        "c2b30e4f-72f7-4169-b04c-1897b438e9dd": 1
+      }
+    },
+    {
+      "id": "AQAGbNHD",
+      "cart": {
+        "d990b12c-5e47-4062-84ef-99f57d4dc52d": 1,
+        "c2b30e4f-72f7-4169-b04c-1897b438e9dd": 1
+      }
+    }
   ]
 }
