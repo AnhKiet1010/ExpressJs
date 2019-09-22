@@ -1,4 +1,4 @@
-var Product = require('../models/product.model');
+var Product = require('../../models/product.model');
 
 module.exports.product = async function(req,res) {
 	// var page = parseInt(req.query.page) || 1; // n
@@ -15,7 +15,5 @@ module.exports.product = async function(req,res) {
 	// 	count: 0
 	// });
 	var products = await Product.find();
-	res.render('viewOFProduct/products', {
-		products: products
-		})
+	res.json(products);
 };

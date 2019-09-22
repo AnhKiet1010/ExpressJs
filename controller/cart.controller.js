@@ -21,9 +21,13 @@ module.exports.addToCart = function(req,res,next) {
 		.set('cart.' + productId ,count + 1)
 		.write();
 
-	var obj = db.get('session').find({id: sessionId});
-	var result = obj.__wrapped__.session;
-	console.log(result);
-
+	var cart = db.get('session')
+				.find({id: sessionId})
+				.get('cart').value();
+	var total = 0;
+	for(key in cart) {
+   		total+=cart[key]
+	}
+	res.locals.count = total;
 	res.redirect('/products');
 }

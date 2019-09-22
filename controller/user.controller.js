@@ -1,5 +1,4 @@
-var db = require('../db');
-var shortid = require('shortid');
+var Users = require('../models/user.model');
 
 module.exports.index = function(req,res) {
 	res.render('users/index' , {
@@ -7,11 +6,12 @@ module.exports.index = function(req,res) {
 	});
 };
 
-module.exports.search = function(req,res) {
+module.exports.search = async function(req,res) {
 	var q = req.query.q;
-	var matchedUsers = db.get('users').value().filter(function(user) {
+	var users = await Users.find();
+	var matchedUsers = users.filter(function(user) {
 		return user.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
-	});
+	})
 	res.render('users/index', {
 		users: matchedUsers
 	});
@@ -28,9 +28,10 @@ module.exports.create = function(req,res) {
 	res.render('users/create');
 };
 
-module.exports.view = function(req,res) {
+module.exports.view = async function(req,res) {
 	var id = req.params.id;
-	var user = db.get('users').find({ id: id }).value();
+	var users = await Users.find();
+	var user = users.find({ id: id }).value();
 
 	res.render('users/view', {
 		user: user
