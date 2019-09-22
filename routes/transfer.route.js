@@ -1,7 +1,8 @@
 var express = require('express');
 
+var controller = require('../controllers/transfer.controller');
+
 var router = express.Router();
-var controller = require('../controller/transfer.controller');
 
 router.get('/create', controller.create);
 router.post('/create', controller.postCreate);
